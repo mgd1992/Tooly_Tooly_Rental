@@ -1,14 +1,19 @@
 <header class="header">
-
-    <%= link_to root_path do %>
-        <%= image_tag "/", class: "logo" %>
-    <% end %>
-    <ul>
+    <div class="logo"><li><%= link_to "Tooly Tooly Rental" %></li></div>
+    <ul class="nav">
         <li><%= link_to "About_Us" %></li>
-        <li><%= link_to "Rent" %></li>
+        <li><%= link_to "Tools" %></li>
     </ul>
-
-
+    <div>
+        <%= link_to root_path do %>
+         <i class="fa-solid fa-user"></i>
+         <% end %>
+    </div>
 </header>
+<div class="banner">
+    <p>BANNER</p>
+</div>
 
-
+<footer class="footer">
+    <p>Develop and design by Moises and Marco</p>
+</footer>
