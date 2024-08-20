@@ -5,5 +5,6 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @tools = Tool.where(category: @category)
   end
 end

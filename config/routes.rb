@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :categories, only: [:show, :index]
   get "about_us", to: "pages#about_us"
-  get "profile/:id", to: "profile#show"
+  get "profile/:id", to: "profiles#show", as: :profile
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

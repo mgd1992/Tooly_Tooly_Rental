@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :tools
+  has_many :tools
 end
