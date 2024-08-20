@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header class="header">
+
+    <%= link_to root_path do %>
+        <%= image_tag "/", class: "logo" %>
+    <% end %>
+    <ul>
+        <li><%= link_to "About_Us" %></li>
+        <li><%= link_to "Rent" %></li>
+    </ul>
+
+
+</header>
+
+
