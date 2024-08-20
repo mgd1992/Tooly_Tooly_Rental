@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:show, :index]
   get "about_us", to: "pages#about_us"
   get "profile/:id", to: "profile#show"
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
