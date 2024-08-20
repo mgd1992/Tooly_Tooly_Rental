@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1><%= @category.name %> tools:</h1>
+
+  <ul>
+    <% @tools.each do |tool| %>
+      <li><%= link_to tool.name, tool_path(tool) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Add a new tool", new_tool_path %>
+</div>

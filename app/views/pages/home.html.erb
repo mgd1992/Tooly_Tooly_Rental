@@ -1,11 +1,11 @@
 <header class="header">
     <div class="logo"><li><%= link_to "Tooly Tooly Rental" %></li></div>
     <ul class="nav">
-        <li><%= link_to "About_Us" %></li>
-        <li><%= link_to "Tools" %></li>
+        <li><%= link_to "Tools", categories_path  %></li>
+        <li><%= link_to "About_Us", about_us_path%></li>
     </ul>
     <div>
-        <%= link_to root_path do %>
+        <%= link_to new_user_session_path do %>
          <i class="fa-solid fa-user"></i>
          <% end %>
     </div>
