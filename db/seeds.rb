@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-#   
+#
 Category.destroy_all
 Category.create!(name: "Gardening")
 Category.create!(name: "Painting")
@@ -15,4 +15,3 @@ Category.create!(name: "Electricity")
 Category.create!(name: "Cleaning")
 Category.create!(name: "Construction")
 Category.create!(name: "High-Works")
-
