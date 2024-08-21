@@ -1,3 +1,9 @@
-<% @tool.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div class="show-card-container" ro>
+  <% if @tool.photos.attached? %>
+    <%= cl_image_tag @tool.photos.first.key, class: "object-fit-cover h-auto w-100" %>
+  <% end %>
+  <div class="text-container">
+    <h1><%= @tool.name %></h1>
+    <p><%= @tool.description %></p>
+  </div>
+</div>
