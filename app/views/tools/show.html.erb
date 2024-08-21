@@ -1,3 +1,7 @@
-<% @article.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div class="position-relative">
+  <div class="card-category card-large">
+    <h1><%= @tool.name %></h1>
+  </div>
+</div>
+
+
