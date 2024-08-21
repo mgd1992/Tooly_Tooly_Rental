@@ -1,7 +1,8 @@
 <%= simple_form_for @tool do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :photo, as: :file, input_html: { multiple: true } %>
+  <%= f.association :category, collection: Category.all %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
-  <%= f.submit %>
+  <%= f.submit "New tool" %>
 <% end %>
