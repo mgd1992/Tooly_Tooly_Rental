@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :categories, only: [:show, :index]
-  get "about_us", to: "pages#about_us"
+  get "about_us", to: "pages#about_us", as: :about_us
   get "profile/:id", to: "profiles#show", as: :profile
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
