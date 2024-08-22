@@ -1,1 +1,13 @@
-<h1>Profile PAGE!!!</h1>
+
+    <div class="profile-container">
+
+        <%= cl_image_tag @user.photo.key, crop: :fill%>
+        <div class="profile-name">
+            <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+        </div>
+        <div clas="profile-info">
+            <p><i class="fa-solid fa-phone"></i> <%= @user.phone_number %></p>
+            <p><i class="fa-regular fa-envelope"></i> <%= @user.email %></p>
+        </div>
+            <%# <%= link_to "Bookings", bookings_path, class: "text-center btn btn-secondary" %>
+   </div>
