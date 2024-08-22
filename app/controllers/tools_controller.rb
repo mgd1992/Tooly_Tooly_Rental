@@ -8,7 +8,7 @@ class ToolsController < ApplicationController
   end
 
   def create
-    
+
     @tool = Tool.new(tool_params)
     @tool.user = current_user
     if @tool.save
@@ -30,6 +30,6 @@ class ToolsController < ApplicationController
   private
 
   def tool_params
-    params.require(:tool).permit(:name, :description, :category_id, photos: [])
+    params.require(:tool).permit(:name, :description, :price, :category_id, photos: [])
   end
 end
