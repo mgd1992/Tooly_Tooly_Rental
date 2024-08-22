@@ -1,0 +1,16 @@
+<div class="profile">
+    <div class="marco">
+        <%= cl_image_tag @marco.photo.key, height: 300, width: 400, crop: :fill%>
+        <div class="marco-text">
+            <h1><%= @marco.first_name %><%= @marco.last_name %></h1>
+            <p>MORE FUNNY DESCRIPTION</p>
+        </div>
+    </div>
+    <div class="moises">
+        <%= cl_image_tag @moises.photo.key, height: 300, width: 400, crop: :fill%>
+        <div class="moises-text">
+            <h1><%= @moises.first_name %><%= @moises.last_name %></h1>
+            <p> Hi! I'm Moises, a Colombian designer who's now coding his way through a Canadian winter. He's trading his salsa moves for debugging and his tropical fruits for maple syrup.</p>
+        </div>
+    </div>
+</div>
