@@ -1,0 +1,8 @@
+<div class="form-card">
+  <h1>New booking</h1>
+  <%= simple_form_for [@tool, @booking] do |f| %>
+    <%= f.input :start_date, as: :string, placeholder: "please select a start date", input_html: { data: { controller: "datepicker" } }%>
+    <%= f.input :end_date, as: :string, placeholder: "please select an end date", input_html: { data: { controller: "datepicker" } } %>
+    <%= f.submit "book", class: "btn btn-primary" %>
+  <% end %>
+</div>
