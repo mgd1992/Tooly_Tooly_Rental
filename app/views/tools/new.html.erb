@@ -1,9 +1,11 @@
+<div class="form-card">
 <%= simple_form_for @tool do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.association :category, collection: Category.all %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.input :name, placeholder: "Full name"%>
+  <%= f.input :description, placeholder: "Add a description of the tool"%>
+  <%= f.input :price, placeholder: "€"%>
+  <%= f.association :category, collection: Category.all%>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }%>
 
-  <%= f.submit "New tool" %>
+  <%= f.submit "New tool", class: "btn btn-primary" %>
 <% end %>
+</div>

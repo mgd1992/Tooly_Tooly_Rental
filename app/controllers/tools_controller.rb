@@ -14,7 +14,7 @@ class ToolsController < ApplicationController
     if @tool.save
       redirect_to tool_path(@tool)
     else
-      render :new, notice: "message"
+      render :new, notice: "We couldn't add that tool, try again!"
     end
   end
 
