@@ -11,9 +11,9 @@
 
 require "open-uri"
 
-Tool.destroy_all
-Category.destroy_all
-User.destroy_all
+# Tool.destroy_all
+# Category.destroy_all
+# User.destroy_all
 
 #categories seeds
 

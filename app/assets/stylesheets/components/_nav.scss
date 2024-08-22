@@ -1,38 +1,4 @@
-a{
-  text-decoration: none;
-  color: rgb(67, 63, 63);
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.dropdown-menu li{
-  height: 47px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: rgb(86, 83, 83);
-}
-
-.dropdown-menu{
-  background-color: rgb(163, 160, 160);
-}
-
-
-.dropdown-menu img{
-  border-radius: 50%;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-li {
-  list-style: none;
-}
-
+  
 .navbar-tooly {
   justify-content: space-between;
   background: white;
