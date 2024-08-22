@@ -1,27 +1,46 @@
-<header class="header">
-    <div class="logo"><li><%= link_to "Tooly Tooly Rental", root_path %></li></div>
-    <ul class="nav">
-        <li><%= link_to "Tools", categories_path  %></li>
-        <li><%= link_to "About_Us", about_us_path%></li>
-    </ul>
-    <div>
-    <div class="dropdown">
-        <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user"></i>
-        </button>
-        <ul class="dropdown-menu">
-            <% if user_signed_in? %>
-            <li>
-                <%= cl_image_tag current_user.photo.key, height: 50, width: 50, crop: :fill%>
-                <%= link_to "Profile", profile_path(current_user), class: "text-center" %>
-            </li>
-            <hr class="dropdown-divider">
-                <li><%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete }, class: "text-center"  %></li>
-            <% else %>
-               <li><%= link_to "Log In", new_user_session_path %></li>
-            <% end %>
-        </ul>
-    </div>
-    </div>
-</header>
 
+<div class="navbar navbar-expand-sm navbar-light navbar-tooly">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "TT-rental-MM.png" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <%= link_to "Rent a tool", categories_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About us", about_us_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+          <% if user_signed_in?%>
+            <%if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, height: 50, width: 50, crop: :fill%>
+            <% else %>
+              <%= image_tag "user-icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+          <% else %>
+            <%= image_tag "user-icon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <i class="fa-solid fa-user avatar dropdown-toggle" id="navbarDropdown" data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false></i>
+          <% end %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <% if user_signed_in?%>
+              <%= link_to "Profile", profile_path(current_user), class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            <% else %>
+              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+            <% end %>
+            </div>
+          </li>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>

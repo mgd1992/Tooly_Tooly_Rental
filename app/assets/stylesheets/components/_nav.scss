@@ -32,3 +32,16 @@ a{
 li {
   list-style: none;
 }
+
+.navbar-tooly {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-tooly .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-tooly .navbar-brand img {
+  width: 100px;
+}
