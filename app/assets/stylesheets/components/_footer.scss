@@ -1,14 +1,14 @@
-.footer{
+.footer {
     width: 100%;
-    height: 100px;
-    line-height: 100px;
+    height: 90px;
+    line-height: 90px;
     background-color: #9e9c9c;
     display: flex;
     justify-content: center;
-
+    align-items: center; /* Center content vertically */
 }
 
-footer p{
+footer p {
     color: #e6e0e0;
+    text-align: center;
 }
-
