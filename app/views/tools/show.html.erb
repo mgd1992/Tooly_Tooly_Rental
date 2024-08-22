@@ -7,6 +7,6 @@
     <h1><%= @tool.name %></h1>
     <p><%= @tool.description %></p>
     <h5><%= @tool.price %>€</h5>
-    <a href="#" class="btn btn-primary w-25">Rent</a>
+    <%= link_to "Rent", new_tool_booking_path(@tool), class: "text-center btn btn-outline-info" %>
   </div>
 </div>

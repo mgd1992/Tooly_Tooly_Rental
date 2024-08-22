@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   before_action :tool_params, only: [:new, :create]
 
+  def index
+    @bookings = Booking.includes(:user)
+  end
+
   def new
     @tool = Tool.find(params[:tool_id])
     @booking = Booking.new
@@ -17,7 +21,15 @@ class BookingsController < ApplicationController
       render :new, notice: "Booking was not successfully created, try again!"
     end
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, notice: "Booking deleted"
+  end
 end
+
+
 
 private
 
