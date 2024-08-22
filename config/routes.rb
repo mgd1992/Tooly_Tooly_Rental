@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :categories, only: [:show, :index]
+  resources :bookings, only: [:index]
   get "about_us", to: "pages#about_us", as: :about_us
   get "profile/:id", to: "profiles#show", as: :profile
 
