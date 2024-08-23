@@ -6,12 +6,15 @@
 }
 
 .cards{
-    height: fit-content;
+    height: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
 
+.container-principal .ul{
+    padding: 25px;
 }
 
 .cards img{
@@ -23,11 +26,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
+    margin: 10px;
+    padding: 7px;
 }
 
 .text-desc{
     font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 280px;
 }
 
 .category-list{
@@ -53,3 +61,13 @@
     letter-spacing: 7px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
+
+.category-container{
+    min-height: calc(100vh - 167px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+
