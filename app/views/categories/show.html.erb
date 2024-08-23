@@ -1,5 +1,5 @@
 <div class="category-container">
-  <h1 class="text-center my-3"><%= @category.name %> tools:</h1>
+  
 
   <ul class="ul">
     <%= link_to "new tool", new_tool_path, class: "btn btn-outline-warning btn-sm my-4" %>
@@ -20,5 +20,12 @@
       <% end %>
     </div>
   </ul>
+  <div class="d-flex justify-content-center my-4">
+    <div style="width: 80%; height: 400px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAP_BOX_API_KEY'] %>">
+    </div>
+  </div>
 </div>
 
