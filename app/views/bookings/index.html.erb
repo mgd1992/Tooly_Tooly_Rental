@@ -1,3 +1,4 @@
+
 <% @bookings.each do |booking| %>
 
   <div class="book">
@@ -14,3 +15,4 @@
   </div>
 
 <% end %>
+<%= link_to " <- Back to profile", profile_path(current_user), class: "btn btn-secondary btn-sm my-4 btn-pepe" %>
