@@ -1,23 +1,24 @@
-
+<div class="category-container">
   <h1 class="text-center my-3"><%= @category.name %> tools:</h1>
 
-  <ul>
+  <ul class="ul">
     <%= link_to "new tool", new_tool_path, class: "btn btn-outline-warning btn-sm my-4" %>
     <div class="container-grid">
       <% @tools.each do |tool| %>
-        <div class="cards">
+        <div class="cards rounded-3">
           <% if tool.photos.attached? %>
-            <%= cl_image_tag tool.photos.first.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag tool.photos.first.key, height: 300, width: 400, crop: :fill, class: "rounded" %>
           <% end %>
           <div class="card-text">
             <li><%= link_to tool.name, tool_path(tool) %></li>
             <li class="text-desc"><%= tool.description %></li>
             <% if current_user == tool.user %>
-              <%= link_to "Delete", tool_path(tool), data: { turbo_method: :delete }, class: "btn btn-outline-danger btn-sm" %>
+              <%= link_to "Delete", tool_path(tool), data: { turbo_method: :delete }, class: "btn btn-outline-danger btn-sm my-3 text-secondary" %>
             <% end %>
           </div>
         </div>
       <% end %>
     </div>
   </ul>
+</div>
 
