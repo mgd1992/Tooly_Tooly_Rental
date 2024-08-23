@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def about_us
-    @marco = User.find_by(email: "marcoogarbini@gmail.com")
-    @moises = User.find_by(email: "moises.leonardo.velasquez.g@gmail.com")
+    @marco = User.find_by(email: "marco@ttr.com")
+    @moises = User.find_by(email: "moises@ttr.com")
   end
 end
