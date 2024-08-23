@@ -2,7 +2,7 @@
 <% @bookings.each do |booking| %>
 
   <div class="book">
-    <% if booking.user.present? %>  
+    <% if booking.user.present? %>
         <div class="booking-card">
             <%= cl_image_tag booking.tool.photos.first.key, height: 200, width: 150, crop: :fill %>
                 <div class="booking-text">

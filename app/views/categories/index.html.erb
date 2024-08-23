@@ -1,7 +1,7 @@
 <% @categories.each do |category| %>
 
     <div class=" d-flex justify-content-center border p-5 w-50 mx-auto my-5 cat-bg-img category-list" style="background-image: url(<%= cl_image_path category.photo.key, crop: :fill %>)">
-    <%= link_to category.name, category_path(category) %>
+    <%= link_to  category.name, category_path(category) %>
     </div>
 
-<% end %> 
+<% end %>
