@@ -34,33 +34,72 @@
     font-style: italic;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 280px;
 }
 
-.category-list{
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
+.category-list {
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: 300ms;
+}
+.category-list:hover {
+  transform: scale(0.95);
+}
+
+.cat-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  filter: blur(1px); /* Apply blur only to the background */
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.6); /* Semi-transparent color */
+  border-radius: 10px;
+  z-index: 2; /* Ensure the overlay is on top of the image */
+  transition: 500ms;
+}
+
+.text-cat {
+  position: relative;
+  z-index: 3; /* Ensure text is above both the background and overlay */
+}
+
+.text-cat a {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.overlay:hover {
+  background-color: rgba(0, 139, 81, 0.4);
 }
 
 .category-list:hover{
-    opacity: .8;
     cursor: pointer;
 }
 
-.category-list a{
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 7px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
+.category-list
 
 .category-container{
     min-height: calc(100vh - 167px);
@@ -69,5 +108,3 @@
     padding: 0;
     border: 1px solid black;
 }
-
-

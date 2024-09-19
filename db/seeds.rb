@@ -44,7 +44,7 @@ plumbing.save
 puts "Created plumbing"
 
 file_cleaning = URI.open("https://res.cloudinary.com/dsxjo0uz0/image/upload/v1724407119/cleaning-c_owkokf.jpg")
-cleaning = Category.new(name: "cleaning")
+cleaning = Category.new(name: "Cleaning")
 cleaning.photo.attach(io: file_cleaning, filename: "p-tools.jpg", content_type: "image/jpg")
 cleaning.save
 puts "Created cleaning"
