@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  transition: 300ms;
+  transition: 700ms ease;
 }
 .category-list:hover {
   transform: scale(0.95);
@@ -62,8 +62,13 @@
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  filter: blur(1px); /* Apply blur only to the background */
+  filter: blur(1.5px);
   z-index: 1;
+  transition: filter 0.5s ease;
+}
+
+.category-list:hover .cat-bg-img {
+  filter: blur(0.8px); /* Apply blur on hover */
 }
 
 .overlay {
@@ -75,7 +80,11 @@
   background-color: rgba(26, 26, 26, 0.6); /* Semi-transparent color */
   border-radius: 10px;
   z-index: 2; /* Ensure the overlay is on top of the image */
-  transition: 500ms;
+  transition: 700ms ease;
+}
+
+.overlay:hover {
+  background-color: rgba(0, 139, 81, 0.4);
 }
 
 .text-cat {
@@ -91,8 +100,9 @@
   text-transform: uppercase;
 }
 
-.overlay:hover {
-  background-color: rgba(0, 139, 81, 0.4);
+.category-list:hover .text-cat a {
+  filter: drop-shadow(0 0 0.75rem rgb(13, 155, 108));
+  color: rgb(255, 196, 0);
 }
 
 .category-list:hover{
