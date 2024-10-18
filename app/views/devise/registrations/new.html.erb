@@ -1,6 +1,6 @@
 <h2 class="text-center mt-3">Sign up</h2>
 
- <div class="container w-75 my-3"> 
+ <div class="container w-75 my-3">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
@@ -20,6 +20,11 @@
                   autofocus: true,
                   placeholder: "Email",
                   input_html: { autocomplete: "email" }%>
+      <%= f.input :phone_number,
+                  required: true,
+                  autofocus: true,
+                  placeholder: "Phone Number",
+                  input_html: { autocomplete: "Phone number" }%>
       <%= f.input :password,
                   required: true,
                   placeholder: "Password",

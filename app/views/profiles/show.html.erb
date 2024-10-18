@@ -1,14 +1,19 @@
+<div class="profile-container pt-4 mx-auto my-5">
+    <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, crop: :fill %>
+    <% else %>
+        <p>No profile photo available</p>
+    <% end %>
 
-    <div class="profile-container pt-4 mx-auto my-5">
-        <%= cl_image_tag @user.photo.key, crop: :fill%>
-        <div class="profile-name">
-            <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-        </div>
-      <div class="card-bottom pb-4">
+    <div class="profile-name">
+        <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+    </div>
+
+    <div class="card-bottom pb-4">
         <div class="profile-info">
             <p class="icon-phone"><i class="fa-solid fa-phone"></i> <%= @user.phone_number %></p>
             <p class="icon-email pb-1"><i class="fa-regular fa-envelope"></i> <%= @user.email %></p>
         </div>
         <%= link_to "Bookings", bookings_path, class: "text-center btn btn-secondary" %>
-      </div>
-   </div>
+    </div>
+</div>
