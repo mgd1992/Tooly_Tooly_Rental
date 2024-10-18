@@ -16,7 +16,9 @@
 .container-principal .ul{
     padding: 25px;
 }
-
+.container-principal {
+  min-height: calc(104vh - 221px);
+}
 .cards img{
     width: 100%;
     height: 150px;
