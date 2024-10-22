@@ -21,6 +21,32 @@
   padding-right: 30px;
 }
 
-.nav-item {
-  margin-right: 15px;
+
+@media (max-width: 400px) {
+  .navbar-tooly{
+    height: 60px;
+  }
+
+  .navbar-tooly .navbar-brand img{
+    width: 200px;
+  }
+
+  .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .nav-link{
+    font-weight: bold;
+  }
+
+  .dropdown{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .nav-item-about {
+    padding-right: 0px;
+  }
+
 }
