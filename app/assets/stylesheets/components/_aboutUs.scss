@@ -1,55 +1,89 @@
-.profile{
-    // min-height: calc(100vh - 170px);
-    // width: 100%;
-    // margin: 0;
-    // padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.marco, .moises{
+  margin: 25px;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+  padding-left: 20px;
 }
 
-.marco, .moises{
-    margin-top: 25px;
-    min-height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
-
-    img {
-      border-top-left-radius: 15px;
-      border-bottom-left-radius: 15px;
-    }
+img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .marco-text, .moises-text{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
-    h1{
-      font-weight: 700;
-    }
+h1{
+  font-weight: 700;
+}
 
-    p{
-      font-size: 16px;
-      max-width: 550px;
-    }
+p{
+  font-size: 16px;
+  max-width: 550px;
+}
 
-    i{
-      font-size: 28px;
-    }
+i{
+  font-size: 28px;
 }
 
 .icons-social {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+
+@media (max-width: 700px) {
+
+  .profile-card{
+    //display: grid;
+    //grid-template-columns: repeat(1, 1fr);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+    flex-wrap: wrap;
+  }
+  .marco, .moises{
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+    border-radius: 15px 15px 15px 15px;
+    background-color: white;
+    padding: 15px;
+  }
+
+  .img-profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .marco-text, .moises-text{
+    margin-top: 25px;
+    white-space: wrap;
+  }
+
+  .icons-social-profile{
+    display: inline-block;
+  }
 }

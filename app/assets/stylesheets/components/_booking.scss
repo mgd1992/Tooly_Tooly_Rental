@@ -1,4 +1,8 @@
 .book{
+  min-height: 84vh;
+}
+
+.book-grid{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -7,34 +11,51 @@
 }
 
 .booking-card{
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 10px 7px rgba(0, 0, 0, 0.2);
-    border-radius: 3%;
+  width: 250px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 10px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 3%;
 }
 
 .booking-card img{
-    width: 100%;
-    margin-bottom: 5px;
-    border-radius: 5%;
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 5%;
 }
 
 
 .booking-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  border-top: 1px solid#120f0f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
 .booking-text p{
-    margin: 0px;
+  margin: 0px;
 }
 
 .btn-pepe{
-    padding: 10px;
-    margin: 0 auto;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 400px) {
+  .book-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-text p{
+    color: rgb(49, 45, 45);
+  }
 }
