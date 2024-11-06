@@ -1,6 +1,6 @@
 # **Tool Rental Web App ⚒️**
 
-### **Status: In Development**
+**Status: In Development**
 
 Project Overview
 
