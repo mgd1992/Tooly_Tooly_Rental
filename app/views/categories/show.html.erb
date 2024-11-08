@@ -1,11 +1,12 @@
 <div class="category-container">
-  
 
   <ul class="ul">
-    <%= link_to "new tool", new_tool_path, class: "btn btn-outline-warning btn-sm my-4" %>
+    <div class="new-tool-item">
+        <%= link_to "new tool", new_tool_path, class: "btn-new-tool" %>
+    </div>
     <div class="container-grid">
       <% @tools.each do |tool| %>
-        <div class="cards rounded-3">
+        <div class="cards-photos">
           <% if tool.photos.attached? %>
             <%= cl_image_tag tool.photos.first.key, height: 300, width: 400, crop: :fill, class: "rounded" %>
           <% end %>
@@ -28,4 +29,3 @@
     </div>
   </div>
 </div>
-

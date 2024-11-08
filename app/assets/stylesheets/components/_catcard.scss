@@ -1,5 +1,6 @@
 .container-grid{
     width: 100%;
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
@@ -16,9 +17,7 @@
 .container-principal .ul{
     padding: 25px;
 }
-.container-principal {
-  min-height: calc(104vh - 221px);
-}
+
 .cards img{
     width: 100%;
     height: 150px;
