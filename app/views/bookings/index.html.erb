@@ -1,18 +1,23 @@
+<div class="book">
 
-<% @bookings.each do |booking| %>
 
-  <div class="book">
-    <% if booking.user.present? %>
-        <div class="booking-card">
-            <%= cl_image_tag booking.tool.photos.first.key, height: 200, width: 150, crop: :fill %>
-                <div class="booking-text">
-                    <p>Start: <%= booking.start_date %></p>
-                    <p>End: <%= booking.end_date  %></p>
-            <%= link_to "delete", booking_path(booking), data: { turbo_method: :delete }, class: "btn btn-danger btn-sm my-4" %>
-                </div>
-        </div>
-    <% end %>
-  </div>
+  <%= link_to " <- Back to profile", profile_path(current_user), class: "btn btn-secondary btn-sm my-4 btn-pepe" %>
+  <% @bookings.each do |booking| %>
 
-<% end %>
-<%= link_to " <- Back to profile", profile_path(current_user), class: "btn btn-secondary btn-sm my-4 btn-pepe" %>
+    <div class="book-grid">
+      <% if booking.user.present? %>
+          <div class="booking-card">
+              <%= cl_image_tag booking.tool.photos.first.key, height: 200, width: 150, crop: :fill %>
+                  <div class="booking-text">
+                      <p>Start: <%= booking.start_date %></p>
+                      <p>End: <%= booking.end_date  %></p>
+              <%= link_to "delete", booking_path(booking), data: { turbo_method: :delete }, class: "btn btn-danger btn-sm my-4" %>
+                  </div>
+          </div>
+      <% end %>
+    </div>
+
+  <% end %>
+
+
+</div>

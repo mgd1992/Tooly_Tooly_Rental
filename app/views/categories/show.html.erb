@@ -1,27 +1,24 @@
 <div class="category-container">
 
-  <ul class="ul">
-    <div class="new-tool-item">
-        <%= link_to "new tool", new_tool_path, class: "btn-new-tool" %>
-    </div>
-    <div class="container-grid">
-      <% @tools.each do |tool| %>
-        <div class="cards-photos">
-          <% if tool.photos.attached? %>
-            <%= cl_image_tag tool.photos.first.key, height: 300, width: 400, crop: :fill, class: "rounded" %>
+  <h2 class="text-center underline text-dark my-4"><%= @category.name %> tools:</h2>
+  <div class="container-grid">
+    <% @tools.each do |tool| %>
+      <div class="cards rounded-3">
+        <% if tool.photos.attached? %>
+          <%= cl_image_tag tool.photos.first.key, height: 300, width: 400, crop: :fill, class: "rounded" %>
+        <% end %>
+        <div class="card-text">
+          <p><%= link_to tool.name, tool_path(tool) %></p>
+          <p class="text-dark">Owner: <%= link_to tool.user.first_name, profile_path(current_user) %></p>
+          <% if current_user == tool.user %>
+            <%= link_to "Delete", tool_path(tool), data: { turbo_method: :delete }, class: "btn btn-outline-danger btn-sm my-1 text-dark" %>
           <% end %>
-          <div class="card-text">
-            <li><%= link_to tool.name, tool_path(tool) %></li>
-            <li class="text-desc"><%= tool.description %></li>
-            <% if current_user == tool.user %>
-              <%= link_to "Delete", tool_path(tool), data: { turbo_method: :delete }, class: "btn btn-outline-danger btn-sm my-3 text-secondary" %>
-            <% end %>
-          </div>
         </div>
-      <% end %>
-    </div>
-  </ul>
-  <div class="d-flex justify-content-center my-4">
+      </div>
+    <% end %>
+  </div>
+
+  <div class="d-flex justify-content-center my-4 map">
     <div style="width: 80%; height: 400px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
