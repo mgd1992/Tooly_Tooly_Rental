@@ -7,15 +7,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+
+    <div class="collapse navbar-collapse nav-list text-end" id="navbarSupportedContent" when>
+      <ul class="navbar-nav mt-3 text-end">
           <li class="nav-item active">
             <%= link_to "Rent a tool", categories_path, class: "nav-link" %>
           </li>
-          <li class="nav-item-about">
-            <%= link_to "About us", about_us_path, class: "nav-link" %>
+          <li class="nav-item active">
+            <%= link_to "New Tool", new_tool_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item-about">
+            <%= link_to "About us", about_us_path, class: "nav-link text-end" %>
+          </li>
+          <li class="nav-item dropdown text-end">
           <% if user_signed_in?%>
             <%if current_user.photo.attached? %>
               <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar", data: { bs_toggle: "dropdown" }, id: "navbarDropdown" %>
@@ -25,7 +29,7 @@
           <% else %>
             <i class="fa-solid fa-user" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" data-bs-popper="static">
+            <div class="dropdown-menu dropdown-menu-end p-0 m-1 w-25" aria-labelledby="navbarDropdown" data-bs-popper="static">
             <% if user_signed_in?%>
               <%= link_to "Profile", profile_path(current_user), class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
@@ -34,11 +38,8 @@
             <% end %>
             </div>
           </li>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
       </ul>
     </div>
+
   </div>
 </div>

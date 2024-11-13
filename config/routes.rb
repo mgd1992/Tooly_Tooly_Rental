@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :destroy]
   get "about_us", to: "pages#about_us", as: :about_us
   get "profile/:id", to: "profiles#show", as: :profile
+  get "profile/:id/edit", to: "profiles#edit", as: :edit_profile
+  patch "profile/:id", to: "profiles#update"
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

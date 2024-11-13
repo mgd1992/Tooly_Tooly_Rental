@@ -1,0 +1,19 @@
+.btn-new-tool {
+  padding: 10px;
+  background-color: #CC3762;
+  border-radius: 5px;
+  font-weight:500;
+  width: 7%;
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-new-tool:hover {
+  background-color: #111111;
+}
+
+.new-tool-item {
+  margin-top: 7px;
+}

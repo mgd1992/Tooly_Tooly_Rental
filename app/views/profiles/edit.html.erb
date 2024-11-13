@@ -1,0 +1,27 @@
+<div class="container">
+  <%= simple_form_for @user, url: profile_path(@user), method: :patch do |f| %>
+    <div class="field">
+      <%= f.input :first_name %>
+    </div>
+
+    <div class="field">
+      <%= f.input :last_name %>
+    </div>
+
+    <div class="field">
+      <%= f.input :email %>
+    </div>
+
+    <div class="field">
+      <%= f.input :phone_number %>
+    </div>
+
+    <div class="field">
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit, "Save changes" %>
+    </div>
+  <% end %>
+</div>

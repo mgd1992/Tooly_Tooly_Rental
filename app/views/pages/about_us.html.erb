@@ -1,18 +1,34 @@
-<div class="profile">
-    <div class="marco">
-        <%= cl_image_tag @marco.photo.key, height: 300, width: 400, crop: :fill%>
-        <div class="marco-text">
-            <h1><%= @marco.first_name %> <%= @marco.last_name %></h1>
-            <p>Hi I'm Marco, an Argentine guy who traded his River Plate jersey for a GitHub profile. He's now debugging in Spanish, trading his empanadas for tapas, and dreaming of creating the next big fermentive app.</p>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-    </div>
-    <div class="moises">
-        <%= cl_image_tag @moises.photo.key, height: 300, width: 400, crop: :fill%>
-        <div class="moises-text">
-            <h1><%= @moises.first_name %> <%= @moises.last_name %></h1>
-            <p> Hi! I'm Moises, a Colombian designer who's now coding his way through a Canadian winter. He's trading his salsa moves for debugging and his tropical fruits for maple syrup.</p>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-    </div>
+<div class="profile-card">
+  <div class="marco">
+      <%= cl_image_tag @marco.photo.key, height: 300, width: 400, crop: :fill, class:"img-profile" %>
+      <div class="marco-text">
+          <h1><%= @marco.first_name %> <%= @marco.last_name %></h1>
+          <p>Hi I'm Marco, an Argentine guy who traded his River Plate jersey for a GitHub profile. He's now debugging in Spanish, trading his empanadas for tapas, and dreaming of creating the next big fermentive app.</p>
+      </div>
+      <div class="icons-social-profile">
+        <%= link_to "https://www.linkedin.com/in/marcodgarbini/", target: "_blank" do %>
+          <i class="fa-brands fa-linkedin text-dark fs-5 px-3 mb-3"></i>
+        <% end %>
+        <%= link_to "https://github.com/mgd1992", target: "_blank" do %>
+            <i class="fa-brands fa-github text-dark fs-5 px-3"></i>
+        <% end %>
+      </div>
+  </div> 
+
+  <div class="moises">
+      <%= cl_image_tag @moises.photo.key, height: 300, width: 400, crop: :fill, class:"img-profile" %>
+      <div class="moises-text">
+          <h1><%= @moises.first_name %> <%= @moises.last_name %></h1>
+          <p> Hi! I'm Moises, a creative web developer and digital designer with expertise  in crafting seamless user experiences, UI design, and multimedia. Proficient in Adobe CC and Figma, with a talent for branding and print media outreach.</p>
+      </div>
+      <div class="icons-social-profile">
+        <%= link_to "https://www.linkedin.com/in/moisesvelasquezgonzalez/", target: "_blank" do %>
+          <i class="fa-brands fa-linkedin text-dark fs-5 px-3 mb-3"></i>
+        <% end %>
+        <%= link_to "https://github.com/Moises-V5", target: "_blank" do %>
+            <i class="fa-brands fa-github text-dark fs-5 px-3"></i>
+        <% end %>
+      </div>
+  </div>
+
 </div>
