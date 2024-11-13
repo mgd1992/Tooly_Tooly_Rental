@@ -15,6 +15,9 @@
         <div class="profile-info">
             <p class="icon-phone"><i class="fa-solid fa-phone"></i> <%= @user.phone_number %></p>
             <p class="icon-email pb-1"><i class="fa-regular fa-envelope"></i> <%= @user.email %></p>
+            <% if current_user == @user %>
+              <%= link_to "Update Profile", edit_profile_path(@user), class: "btn btn-outline-primary btn-sm my-3" %>
+            <% end %>
         </div>
         <%= link_to "My bookings", bookings_path, class: "text-center btn btn-secondary rounded-3" %>
     </div>
